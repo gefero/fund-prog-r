@@ -2,7 +2,7 @@
 title: "Fundamentos de la programación estadística y Data Mining en R"
 author: "Dr. Germán Rosati (Digital House - UNTREF - UNSAM)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: pdf_document
+output: slidy_presentation
 ---
 
 # Regresión lineal

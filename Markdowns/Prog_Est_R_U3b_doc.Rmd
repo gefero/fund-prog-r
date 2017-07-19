@@ -23,7 +23,7 @@ subtitle: "Unidad 3. Regresión logística y Árboles de Decisión en R"
 ### Gráficos de dispersión
 
 ```{r, tidy=TRUE}
-setwd("F:/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
+setwd("/media/digitalhouse/Elements6/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
 default<-read.csv("default.csv")
 plot(default$balance,default$income
       , col=c("lightblue","green")[default$default]

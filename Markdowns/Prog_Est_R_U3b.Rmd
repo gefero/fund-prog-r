@@ -2,10 +2,8 @@
 title: "Fundamentos de la programación estadística y Data Mining en R"
 author: "Dr. Germán Rosati (Digital House - UNTREF - UNSAM)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
-  pdf_document: default
-  #html_document: default
 subtitle: "Unidad 3. Regresión logística y árboles de decisión en R"
+output: slidy_presentation
 ---
 
 ## Implementación de una regresión logística en R
@@ -21,9 +19,8 @@ subtitle: "Unidad 3. Regresión logística y árboles de decisión en R"
 * Carguemos los datos y hagamos algunos gráficos para refrescar conceptos vistos en la clase pasada.
 
 ### Gráficos de dispersión
-
 ```{r, tidy=TRUE}
-setwd("F:/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
+setwd("/media/digitalhouse/Elements6/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
 default<-read.csv("default.csv")
 plot(default$balance,default$income
       , col=c("lightblue","green")[default$default]
