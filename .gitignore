@@ -36,7 +36,6 @@ vignettes/*.pdf
 # Output data
 *.db
 *.Rda
-*.csv
 *.html
 
 # I'm not sure if this part works yet
