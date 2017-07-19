@@ -1,0 +1,129 @@
+##############################################################################
+## Curso: FUNDAMENTOS DE LA PROGRAMACION ESTADISTICA Y DATA MINING EN R. 
+##        ESTADISTICA DESCRIPTIVA, MODELOS DE REGRESION Y ARBOLES DE DECISION
+##       
+## Julio-Agosto 2017
+## Docente: German Rosati
+##############################################################################
+
+########################################
+####### GENERACION DE DATOS EN R #######
+########################################
+
+### 1. CREACION DE UN VECTOR ###
+x<-c("Sun","Hot","High","Low","No") #  STRINGS
+
+x<-c(1,2,7,3,88) #INTEGERS
+x<-seq(from=0,to=10,by=1) # CREACION DE SECUENCIAS DE INTEGERS
+x<-1:10 
+
+x<-c(0.1,47.2,7.2) #NUMERICS
+x<-seq(from=0,to=10,by=0.01) # CREACION DE SECUENCIAS DE NUMERICS
+
+x<-c(TRUE, FALSE) #LOGICALS
+x<-c(T, F) #LOGICALS-> EN GENERAL MEJOR NO USAR ESTA FORMA ABREVIADA
+
+### CREACION DE UNA MATRIX ###
+data<-matrix(data=c("Sun","Hot","High","Low","No",
+"Sun","Hot","High","High","No",
+"Overcast","Hot","High","Low","Yes",
+"Rain","Sweet","High","Low","Yes",
+"Rain","Cold","Normal","Low","Yes",
+"Rain","Cold","Normal","High","No",
+"Overcast","Cold","Normal","High","Yes",
+"Sun","Sweet","High","Low","No",
+"Sun","Cold","Normal","Low","Yes",
+"Rain","Sweet","Normal","Low","Yes",
+"Sun","Sweet","Normal","High","Yes",
+"Overcast","Sweet","High","High","Yes",
+"Overcast","Hot","Normal","Low","Yes",
+"Rain","Sweet","High","High","No"), 
+        nrow=14,ncol=5,byrow=TRUE,
+        dimnames=list(c("D1","D2","D3","D4","D5","D6","D7","D8",
+                        "D9","D10","D11","D12","D13","D14"),
+                      c("Outlook","Temperature","Humidity",
+                        "Wind","Play")))
+
+
+### TRANSFORMACION EN DATAFRAME ###
+data<-as.data.frame(data)
+
+### SUBSETTING (SUBSETEANDO)
+##DATAFRAMES == MATRIX
+
+#POR INDICE
+data[,1] #SELECCIONA LA COLUMNA 1 y TODAS LAS FILAS
+data[,1:5] #SELECCIONA LA COLUMNA 1:5 y TODAS LAS FILAS
+data[1,] #SELECCIONA LA FILA 1 y TODAS LAS COLUMNAS
+data[1,1] # ??
+
+#POR NOMBRE
+names(data)
+data$Outlook==data[,1]
+		
+########################################
+########## ACTIVIDADES SEMANA 1. ###### 
+########################################
+
+# Una herramienta muy interesante es Swirl. 
+# Es una plataforma que corre en R y sirve para programar y resolver ejercicios 
+# con una guía interactiva en la misma línea de comando de R. 
+# Para este curso les recomiendo el módulo que programó para su curso 
+# Ismael Fernández (casualmente con un nombre muy parecido a este). 
+# Para trabajar solamente tienen que instalar el paquete "swirl", cargar 
+# la librería y correr este comando: 
+
+install.packages("swirl")
+library(swirl)
+install_course_github("ifunam", "programacion-estadistica-r")
+
+#Para esta unidad, les recomiendo trabajar con las unidades 1 a 4.
+
+## 2. IMPORTAR EL DATASET "data_filt.csv" 
+# (se asume que el archivo está en el working directory)
+
+
+## 3. GENERAR UNA FUNCION QUE DETERMINE SI UN NUMERO ES IMPAR
+
+
+## 4. GENERAR UNA FUNCION QUE DETERMINE SI UN NUMERO ES PRIMO
+
+
+## 5. GENERAR UNA FUNCION QUE CALCULE LA MEDIA DE UNA 
+# COLUMNA CUANTITATIVA DEL DATASET. COMPARAR EL RESULTADO 
+# CON LA FUNCION mean() 
+
+## 6. GENERAR UNA FUNCION QUE CALCULE EL RANGO DE UNA 
+# COLUMNA CUANTITATIVA DEL DATASET. COMPARAR EL RESULTADO 
+# CON LA FUNCION range()
+
+## 6. ESCRIBIR UNA FUNCION QUE CALCULE EL DESVIO ESTANDAR DE UNA 
+# COLUMNA CUANTITATIVA DEL DATASET.
+
+## 7. ESCRIBIR UNA FUNCION QUE CALCULE EL DESVIO ESTANDAR DE UNA 
+# COLUMNA CUANTITATIVA DEL DATASET. COMPARAR EL RESULTADO CON LA
+# FUNCION sd()
+
+## 8. ESCRIBIR UNA FUNCION QUE CALCULE EL COEFICIENTE DE VARIACION 
+# DE UNA COLUMNA CUANTITATIVA DEL DATASET. PISTA: SE PUEDE USAR ALGUNA
+# DE LAS FUNCIONES GENERADAS MAS ARRIBA
+
+
+## 9. LOS EXAMENES DE UNA MATERIA SE DISTRIBUYEN DE FORMA
+# NORMAL CON UNA MEDIA DE 65 Y UN DESVIO DE 13.1.
+# ¿QUÉ PROBABILIDAD HAY DE ENCONTRAR UN ESTUDIANTE
+# QUE HAYA OBTENIDO 84 O MAS EN EL EXAMEN?
+
+## 10. SUPONGA QUE HAY UN EXMAEN EN EL QUE HAY 20 PREGUNTAS DE 
+# MULTIPLE CHOICE. CADA PREGUNTA TIENE CINCO RESPUESTAS
+# CORRECTAS POSIBLE Y SOLAMENTE UNA ES CORRECTA.
+# ENCONTRAR LA PROBABILIDAD DE QUE UN ESTUDIANTE 
+# TENGA 4 O MENOS RESPUESTAS CORRECTAS SI INTENTA CONTESTAR
+# CADA PREGUNTA ALEATORIAMENTE.
+
+
+## 11. COMPRUEBE LA LEY DE LOS GRANDES NUMEROS
+# PARA LA ESTIMACION DE UNA PROPORCION POBLACIONAL A PARTIR
+# DE UNA MUESTRA
+
+
