@@ -33,6 +33,8 @@ El material para el curso fue extraído y transformado de diversas fuentes.
 - Materiales de [Kelly Black](http://www.cyclismo.org/tutorial/R/index.html#)
 - [Quick R Tutorial](http://www.statmethods.net/index.html)
 - [R Tutorial](http://www.r-tutor.com/)
+- [R Cheat-Sheet](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf)
+- [R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)
 
 ## Contenidos resumidos
 
