@@ -71,11 +71,11 @@ help(mean)
 * Muchos paquetes "generan" sus propios objetos
 * No obstante, la mayoría de las tareas pueden resolverse con algunos pocos tipos de objetos 
 * En R hay cinco tipos atómicos de objetos
-        + `character`
-        + `numeric`
-        + `integer`
-        + `complex`
-        + `logical` (TRUE/FALSE)
+	+ `character`
+	+ `numeric`
+	+ `integer`
+	+ `complex`
+	+ `logical`
 
 # Objetos en R
 * Cada objeto en R tiene atributos
@@ -172,7 +172,7 @@ rbind(x,y)
 # Objetos en R: Listas
 * Las listas son una clase especial de vector: pueden contener elementos de cualqueir tipo en su interior.
 * Son objetos muy importantes en R: la mayoría de los resultados de los modelos que se aplican en R devuelven como output un objeto que es una lista.
-* Otro ejemplo: al importar datos de un GIS (.shp, .geojson, geodatabaste, etc.) R los interpreta como una lista.
+* Otro ejemplo: al importar datos de un GIS (.shp, .geojson, geodatabase, etc.) R los interpreta como una lista.
 
 # Objetos en R: Listas
 ```{r, highlight=TRUE, prompt=TRUE, strip.white=FALSE, collapse=TRUE, tidy=TRUE, echo=TRUE}
@@ -319,7 +319,7 @@ x[c(1,3)]
 ```
 
 # Subsetting/Slicing en R: Listas
-* El operador `[[]]` puede usarse con índices calculado. `$` solo puede usarse con nombres
+* El operador `[[]]` puede usarse con índices calculados. `$` solo puede usarse con nombres
 ```{r, highlight=TRUE, prompt=TRUE, strip.white=FALSE, collapse=TRUE, tidy=TRUE}
 x<-list(foo = 1:4, bar = 0.6, baz = 'hola')
 name<-'bar' # Indice computado
@@ -338,7 +338,8 @@ x[[c(2,1)]]
 ```
 
 # Subsetting/Slicing en R: Indexado Lógico 
-* En R es posible utlizar un vector de booleanos (`TRUE`-`FALSE`) como insumo para hacer subsetting/slicing. Tiene que tener la misma longitud que el objeto que vamos a subsetear y la idea es que los miembros del objeto original que están en la "posición" `TRUE` del vector lógico son extraidos para el slice, mientras que los que están en la "posición" `FALSE`, no. 
+* En R es posible utlizar un vector de booleanos (`TRUE`-`FALSE`) como insumo para hacer subsetting/slicing. Tiene que tener la misma longitud que el objeto que vamos a subsetear
+* La idea es que los miembros del objeto original que están en la "posición" `TRUE` del vector lógico son extraidos para el slice, mientras que los que están en la "posición" `FALSE`, no. 
 ```{r, highlight=TRUE, prompt=TRUE, strip.white=FALSE, collapse=TRUE, tidy=TRUE}
 x<-c("aa", "bb", "cc", "dd", "ee")
 index<-c(FALSE, TRUE, FALSE, TRUE, FALSE)
@@ -351,7 +352,7 @@ x[index]
 
 # Valores NA: eliminarlos
 * Puede ser pensado como un caso de indexado lógico:
-* Relativamente fácil: `is.na()` devuelve un vector de lógical 
+* Relativamente fácil: `is.na()` devuelve un vector de lógicals 
 ```{r, highlight=TRUE, prompt=TRUE, strip.white=FALSE, collapse=TRUE, tidy=TRUE}
 x<-c(1,2,NA,4,NA)
 no<-is.na(x)

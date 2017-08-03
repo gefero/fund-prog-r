@@ -2,7 +2,7 @@
 ## Curso: FUNDAMENTOS DE LA PROGRAMACION ESTADISTICA Y DATA MINING EN R. 
 ##        ESTADISTICA DESCRIPTIVA, MODELOS DE REGRESION Y ARBOLES DE DECISION
 ##       
-## Junio-Julio 2017
+## Julio 2017
 ## Docente: German Rosati
 ##############################################################################
 

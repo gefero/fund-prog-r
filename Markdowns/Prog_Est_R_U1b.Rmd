@@ -162,11 +162,11 @@ apply(x,1,sum) # suma sobre filas
 * Para sumas y medias sobre filas y columnas existen algunas funciones mucho más optimizadas que los `apply()`
 	+ `colSums` == `apply(x,2,sum)`
 	+ `rowSums` == `apply(x,1,sum)`
-	+ `rowMeans` == `apply(x,2,mean)`
+	+ `colMeans` == `apply(x,2,mean)`
 	+ `rowMeans` == `apply(x,1,mean)`
 	
 # Funciones especiales: la familia `apply()`
-* Otra forma de usar `apply()`: calcular cuartiles sobre las filas de una matriz.
+* Otra forma de usar `apply()`: calcular cuartiles sobre las columnas de una matriz.
 ```{r, highlight=TRUE, prompt=TRUE, strip.white=FALSE, collapse=TRUE, tidy=TRUE}
 options(digits=4)
 x<-matrix(rnorm(200),40,5)

@@ -1,3 +1,7 @@
+# Specific files
+/Scripts/Script_U2_Error_CV_Ejemplo.R
+/Scripts/Script_U2b_Train_Test_Ejemplo.R
+
 # History files
 .Rhistory
 .Rapp.history

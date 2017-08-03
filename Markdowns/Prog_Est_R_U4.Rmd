@@ -3,7 +3,7 @@ title: "Fundamentos de la programación estadística y Data Mining en R"
 author: "Dr. Germán Rosati (Digital House - UNTREF - UNSAM)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: slidy_presentation
-subtitle: "Unidad 3. Regresión Logística y Árboles de Decisión en R"
+subtitle: "Unidad 4. Árboles de Decisión en R"
 ---
 
 ## Implementación de un árbol de decisión mediante CART en R
