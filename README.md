@@ -35,10 +35,11 @@ El material para el curso fue extraído y transformado de diversas fuentes.
 - [R Tutorial](http://www.r-tutor.com/)
 - [R Cheat-Sheet](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf)
 - [R Reference Card](https://cran.r-project.org/doc/contrib/Short-refcard.pdf)
+- [A very quick introduction to ggplot2](http://chrisladroue.com/extra/ggplot2Intro/introductionGGplot2/)
 
 ## Contenidos resumidos
 
-* *Unidad 1. Elementos de programación estadística en R:* Objetos en R (vectores, matrices, data frames y listas). Estructuras de control: `for`, `while`, `if`. Implementación de funciones ad-hoc. Análisis estadístico descriptivo básico en R: `mean()`, `sd()`, `var()`, etc. Generación de números aleatorios y distribuciones de probabilidad. Generación de gráficos y visualización de datos: `plot()`, . Importación y exportación de datos (.csv, .txt, .tab, .sav, etc.).
+* *Unidad 1. Elementos de programación estadística en R:* Objetos en R (vectores, matrices, data frames y listas). Estructuras de control: `for`, `while`, `if`. Implementación de funciones ad-hoc. Análisis estadístico descriptivo básico en R: `mean()`, `sd()`, `var()`, etc. Generación de números aleatorios y distribuciones de probabilidad. Generación de gráficos y visualización de datos: `plot()`, `hist()`, `boxplot()`, `barplot()`. Opcional: introducción breve a `ggplot2`. Importación y exportación de datos (.csv, .txt, .tab, .sav, etc.).
 
 * *Unidad 2. Nociones básicas de data mining/aprendizaje automático:*  Tipos de problemas en aprendizaje supervisado: clasificación y regresión. Error de entrenamiento (training error), error de prueba (test error). Sobre-ajuste. Balance entre el sesgo y la variancia de un modelo. Métodos de estimación del error: partición del dataset, validación cruzada. Aplicaciones en R.
 
