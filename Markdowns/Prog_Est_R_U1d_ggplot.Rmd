@@ -1,5 +1,6 @@
 ---
-title: "Introducción (brevísima) a ggplot2"
+title: "Fundamentos de la programación estadística y Data Mining en R"
+subtitle: "Unidad 1. - Introducción (brevísima) a ggplot2"
 output: beamer_presentation
 colortheme: orchid
 fig_caption: TRUE
@@ -9,7 +10,7 @@ highlight: tango
 theme: Boadilla
 toc: FALSE
 author: "Dr. Germán Rosati (Digital House - UNSAM - UNTREF)"
-date: "`r Sys.Date()`"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 ---
 
 ## ¿Qué es ggplot?      
@@ -142,6 +143,7 @@ p+geom_point(aes(x=carat,y=price)) +
 ```
 
 ## Faceting: condicionando sobre variables
+* Con el argumento `nrow=1` generamos todos los gráficos sobre una sola fila.
 ```{r ch16, echo=TRUE, eval=FALSE}
 p+geom_point(aes(x=carat,y=price)) + 
         facet_wrap(~cut, nrow=1)
@@ -154,6 +156,7 @@ p+geom_point(aes(x=carat, y=price)) +
 ```
 
 ## Faceting: condicionando sobre variables
+* Con el argumento `ncol=1` generamos todos los gráficos sobre una sola columna.
 ```{r ch18, echo=TRUE, eval=FALSE}
 p+geom_point(aes(x=carat, y=price)) + 
         facet_wrap(~cut, ncol=1)
@@ -166,6 +169,7 @@ p+geom_point(aes(x=carat, y=price)) +
 ```
 
 ## Faceting: condicionando sobre variables
+* Usando la estética `facet_grid(cut~color)` generamos una grilla con los valores de `cut` y `color` y ploteamos un gráfico scatter para cada elemento de la grilla.
 ```{r ch20, echo=TRUE, eval=FALSE}
 p+geom_point(aes(x=carat,y=price)) + 
         facet_grid(cut~color)
@@ -239,8 +243,10 @@ ggplot(small) +
 
 ## Otras geometrías: density plots
 ```{r ch29, fig.height=2, fig.width=3.7, fig.align='center'}
-ggplot(small) + geom_density(aes(x=price, fill=cut))
+ggplot(small) + 
+        geom_density(aes(x=price, fill=cut))
 ```
+
 ## Otras geometrías: density plots
 ```{r ch30, fig.height=2, fig.width=3.7, fig.align='center'}
 ggplot(small) + 
