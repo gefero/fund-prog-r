@@ -39,13 +39,19 @@ El material para el curso fue extraído y transformado de diversas fuentes.
 
 ## Contenidos resumidos
 
-* *Unidad 1. Elementos de programación estadística en R:* Objetos en R (vectores, matrices, data frames y listas). Estructuras de control: `for`, `while`, `if`. Implementación de funciones ad-hoc. Análisis estadístico descriptivo básico en R: `mean()`, `sd()`, `var()`, etc. Generación de números aleatorios y distribuciones de probabilidad. Generación de gráficos y visualización de datos: `plot()`, `hist()`, `boxplot()`, `barplot()`. Opcional: introducción breve a `ggplot2`. Importación y exportación de datos (.csv, .txt, .tab, .sav, etc.).
+* *Unidad 1a. Elementos de programación estadística en R:* Objetos en R (vectores, matrices, data frames y listas). Estructuras de control: `for`, `while`, `if`. Implementación de funciones ad-hoc. Análisis estadístico descriptivo básico en R: `mean()`, `sd()`, `var()`, `table()`, etc. Generación de números aleatorios y distribuciones de probabilidad.
+
+* *Unidad 1b. Visualización y generación de gráficos en R:* Nociones de graficación (forma, color, tamaño, color). Niveles de medición y gráficos adecuados. Funciones `plot()`, `hist()`, `boxplot()`, `barplot()`. Introducción breve a `ggplot2`: `ggplot()`, `geom_points()`, `geom_smooth()`, `aes()`, `facet_wrap()`, `facet_grid()`. Importación y exportación de datos (.csv, .txt, .tab, .sav, etc.).
 
 * *Unidad 2. Nociones básicas de data mining/aprendizaje automático:*  Tipos de problemas en aprendizaje supervisado: clasificación y regresión. Error de entrenamiento (training error), error de prueba (test error). Sobre-ajuste. Balance entre el sesgo y la variancia de un modelo. Métodos de estimación del error: partición del dataset, validación cruzada. Aplicaciones en R.
 
-* *Unidad 3. Análisis de regresión en R.:*  Implementación y análisis de modelos de regresión lineal y logística. Evaluación del modelo: supuestos, ajuste, estimación de error de generalización. Extensiones del modelo lineal y logístico: variables cualitativas, no linealidad, etc. Funciones lm, glm y predict. Funciones `lm()`, `glm()` y `predict()`.
+* *Unidad 3a. Análisis de regresión en R:*  Implementación y análisis de modelos de regresión lineal y logística. Evaluación del modelo: supuestos, ajuste, estimación de error de generalización. Extensiones del modelo lineal y logístico: variables cualitativas, no linealidad, etc. Funciones lm, glm y predict. Funciones `lm()`, `glm()` y `predict()`.
+
+* *Unidad 3b. Introducción al análisis longitudinal en R: -opcional-* Modelos de efectos fijos. Modelos de efectos mixtos (efectos mixtos lineales y modelos lineales mixtos) en R. Estimación e inferencia. Paquete ``
 
 * *Unidad 4. Clasficadores basados en árboles:* Generalidades. Algoritmos ID4, C4.5 y CART. Partición múltiple y binaria, medidas de pureza de nodos. Crecimiento (growing) y podado (prunning) de árboles de decisión. Balance entre costo y complejidad del árbol. Aplicaciones en R (paquetes `tree`, `rpart` y `randomForest`).
+
+
 
 ## Bibliografía básica
 
