@@ -47,7 +47,7 @@ El material para el curso fue extraído y transformado de diversas fuentes.
 
 * *Unidad 3a. Análisis de regresión en R:*  Implementación y análisis de modelos de regresión lineal y logística. Evaluación del modelo: supuestos, ajuste, estimación de error de generalización. Extensiones del modelo lineal y logístico: variables cualitativas, no linealidad, etc. Funciones lm, glm y predict. Funciones `lm()`, `glm()` y `predict()`.
 
-* *Unidad 3b. Introducción al análisis longitudinal en R: -opcional-* Modelos de efectos fijos. Modelos de efectos mixtos (efectos mixtos lineales y modelos lineales mixtos) en R. Estimación e inferencia. Paquete ``
+* *Unidad 3b. Introducción al análisis longitudinal en R: -opcional-* Modelos de efectos fijos. Modelos de efectos mixtos (efectos mixtos lineales y modelos lineales mixtos) en R. Estimación e inferencia. Paquetes `lme4`, `lfe`
 
 * *Unidad 4. Clasficadores basados en árboles:* Generalidades. Algoritmos ID4, C4.5 y CART. Partición múltiple y binaria, medidas de pureza de nodos. Crecimiento (growing) y podado (prunning) de árboles de decisión. Balance entre costo y complejidad del árbol. Aplicaciones en R (paquetes `tree`, `rpart` y `randomForest`).
 
