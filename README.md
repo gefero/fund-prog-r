@@ -45,11 +45,11 @@ El material para el curso fue extraído y transformado de diversas fuentes.
 
 * *Unidad 2. Nociones básicas de data mining/aprendizaje automático:*  Tipos de problemas en aprendizaje supervisado: clasificación y regresión. Error de entrenamiento (training error), error de prueba (test error). Sobre-ajuste. Balance entre el sesgo y la variancia de un modelo. Métodos de estimación del error: partición del dataset, validación cruzada. Aplicaciones en R.
 
-* *Unidad 3a. Análisis de regresión en R:*  Implementación y análisis de modelos de regresión lineal y logística. Evaluación del modelo: supuestos, ajuste, estimación de error de generalización. Extensiones del modelo lineal y logístico: variables cualitativas, no linealidad, etc. Funciones lm, glm y predict. Funciones `lm()`, `glm()` y `predict()`.
-
-* *Unidad 3b. Introducción al análisis longitudinal en R: -opcional-* Modelos de efectos fijos. Modelos de efectos mixtos (efectos mixtos lineales y modelos lineales mixtos) en R. Estimación e inferencia. Paquetes `lme4`, `lfe`
+* *Unidad 3a. Introducción a los problemas de regresión y clasificación en R:*  Implementación y análisis de modelos de regresión lineal y logística. Evaluación del modelo: supuestos, ajuste, estimación de error de generalización. Extensiones del modelo lineal y logístico: variables cualitativas, no linealidad, etc. Funciones lm, glm y predict. Funciones `lm()`, `glm()` y `predict()`.
 
 * *Unidad 4. Clasficadores basados en árboles:* Generalidades. Algoritmos ID4, C4.5 y CART. Partición múltiple y binaria, medidas de pureza de nodos. Crecimiento (growing) y podado (prunning) de árboles de decisión. Balance entre costo y complejidad del árbol. Aplicaciones en R (paquetes `tree`, `rpart` y `randomForest`).
+
+* *-Opcional- Unidad 5. Introducción al análisis de secuencias con el paquete `TraMineR` en R:* Estructuras de datos para el análisis de secuencia: inspección gráfica, análisis descriptivo (largo de secuencias, tiempo de estados, tasas de transición, etc.), medidas de disimilaridad entre sencuencias, identificación de secuencias relevantes, tipologías de secuencias (clustering, etc.).
 
 
 

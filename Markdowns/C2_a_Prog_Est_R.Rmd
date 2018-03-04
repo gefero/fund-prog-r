@@ -1,19 +1,16 @@
 ---
 title: "Fundamentos de la programación estadística y Data Mining en R"
 subtitle: "Unidad 1. Estructuras de control y funciones en R"
-author: "Dr. Germán Rosati (Digital House - UNTREF - UNSAM)"
+output: beamer_presentation
+colortheme: orchid
+fig_caption: TRUE
+fonttheme: professionalfonts
+highlight: tango
+#theme: Darmstadt
+theme: Boadilla
+toc: FALSE
+author: "Dr. Germán Rosati (Digital House - UNSAM - UNTREF)"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
-  beamer_presentation:
-    colortheme: orchid
-    fig_caption: yes
-    fonttheme: professionalfonts
-    highlight: tango
-    theme: Boadilla
-    #pandocargs: 
-    #- --latex-engine
-    #- C:/Program Files/MiKTeX 2.9/miktex/bin/x64/pdflatex.exe
-    toc: no
 ---
 
 # Estructuras de control
@@ -97,7 +94,7 @@ for (i in 1:nrow(x)){
 * En general, hay que tener cuidado cuando se anidan for loops. Anidar más de 2-3 niveles puede hacer el código muy lento y, además, difícil de entender.
 
 # Estructuras de control: `while` loops
-* Los`while` loops empiezan testeando una condición. Si la condición es verdadera ejecutan el bloque de código debajo del `while`.  Una vez que se ejecuta el bloque, se vuelve a testar la condición,
+* Los `while` loops empiezan testeando una condición. Si la condición es verdadera ejecutan el bloque de código debajo del `while`.  Una vez que se ejecuta el bloque, se vuelve a testar la condición,
 * Cuando la condición se hace falsa sale del loop.
 ```{r, highlight=TRUE, prompt=TRUE, strip.white=FALSE, results='markup', collapse=TRUE, tidy=TRUE}
 count<-0
@@ -320,7 +317,7 @@ qbinom(0.5,51,1/2)
 qbinom(0.25,51,1/2)
 ```
 
-# Distribuciones de probabilidad: Normal
+# Distribuciones de probabilidad: Binomial
 * `rbinom()`: arroja números aleatorios de una distribución binomial con los parámetros especificados. 
 	+ `n`: cantidad de números aleatorios a devolver
 	+ `size`: cantidad de pruebas, o sea, el $n$

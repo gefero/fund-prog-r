@@ -62,7 +62,7 @@ ggplot(small) +
 ```
 
 ## Ejemplo rápido: descomponiendo el código
-1. Creamos el objeto ggplot y lo "llena" con los datos (siembre deberá ser un dataframe)
+1. Creamos el objeto ggplot y lo "llenamos" con los datos (siembre deberá ser un dataframe)
 ```{r ch4, echo=TRUE, eval=FALSE}
 ggplot(small) +
 ```
@@ -109,11 +109,11 @@ ggplot(small,aes(x=carat,y=price)) +
 ## Mapeo de estéticas: una sutileza
 * Hay una diferencia entre setear y asignar estéticas.
 ```{r ch10, echo=FALSE, eval=TRUE}
-p<-ggplot(small)
+p <- ggplot(small)
 ```
 * La asignación (o "mapping") se hace a través de `aes`
 ```{r ch11, fig.align='center', fig.height=2.5, fig.width=4, dev='pdf'}
-p+geom_point(aes(x=carat,y=price,colour=cut))
+p + geom_point(aes(x=carat,y=price,colour=cut))
 ```
 
 ## Mapeo de estéticas: una sutileza
@@ -126,72 +126,74 @@ p + geom_point(aes(x=carat,y=price), colour="blue")
 ## Mapeo de estéticas: una sutileza
 * Tratar de fijar una estética dentro de `aes` ambas formas puede traer resultados inesperados:
 ```{r ch13, fig.align='center', fig.height=2.5, fig.width=4, dev='pdf'}
-p+geom_point(aes(x=carat,y=price,colour="blue"))
+p + geom_point(aes(x=carat,y=price,colour="blue"))
 ```
 
 ## Faceting: condicionando sobre variables
 * `facet_xxx` se usa para condicionar sobre 1 o 2 varibles. Es decir, para producir un gráfico difernete para cada valor de la variable en `facet_xxx`. Veamos sobre la variable `cut`:
 ```{r ch14, echo=TRUE, eval=FALSE}
-p+geom_point(aes(x=carat,y=price)) + 
-        facet_wrap(~cut)
+p + geom_point(aes(x=carat,y=price)) + 
+  facet_wrap(~cut)
 ```
 
 ## Faceting: condicionando sobre variables
 ```{r ch15, echo=FALSE, fig.align='center'}
-p+geom_point(aes(x=carat,y=price)) + 
-        facet_wrap(~cut)
+p + geom_point(aes(x=carat,y=price)) + 
+  facet_wrap(~cut)
 ```
 
 ## Faceting: condicionando sobre variables
 * Con el argumento `nrow=1` generamos todos los gráficos sobre una sola fila.
 ```{r ch16, echo=TRUE, eval=FALSE}
-p+geom_point(aes(x=carat,y=price)) + 
-        facet_wrap(~cut, nrow=1)
+p + geom_point(aes(x=carat,y=price)) + 
+  facet_wrap(~cut, nrow=1)
 ```
 
 ## Faceting: condicionando sobre variables
 ```{r ch17, echo=FALSE, fig.align='center'}
-p+geom_point(aes(x=carat, y=price)) + 
-        facet_wrap(~cut, nrow=1)
+p + geom_point(aes(x=carat, y=price)) + 
+  facet_wrap(~cut, nrow=1)
 ```
 
 ## Faceting: condicionando sobre variables
 * Con el argumento `ncol=1` generamos todos los gráficos sobre una sola columna.
 ```{r ch18, echo=TRUE, eval=FALSE}
-p+geom_point(aes(x=carat, y=price)) + 
-        facet_wrap(~cut, ncol=1)
+p + geom_point(aes(x=carat, y=price)) + 
+  facet_wrap(~cut, ncol=1)
 ```
 
 ## Faceting: condicionando sobre variables
 ```{r ch19, echo=FALSE, fig.align='center'}
-p+geom_point(aes(x=carat, y=price)) + 
-        facet_wrap(~cut, ncol=1)
+p + geom_point(aes(x=carat, y=price)) + 
+  facet_wrap(~cut, ncol=1)
 ```
 
 ## Faceting: condicionando sobre variables
 * Usando la estética `facet_grid(cut~color)` generamos una grilla con los valores de `cut` y `color` y ploteamos un gráfico scatter para cada elemento de la grilla.
 ```{r ch20, echo=TRUE, eval=FALSE}
-p+geom_point(aes(x=carat,y=price)) + 
-        facet_grid(cut~color)
+p + geom_point(aes(x=carat,y=price)) + 
+  facet_grid(cut~color)
 ```
 
 ## Faceting: condicionando sobre variables
 ```{r ch21, echo=FALSE, fig.align='center'}
-p+geom_point(aes(x=carat,y=price)) + 
-        facet_grid(cut~color)
+p + geom_point(aes(x=carat,y=price)) + 
+  facet_grid(cut~color)
 ```
 
 ## Otras geometrías: `geom_smooth`
 * `geom_smooth` se usa para desplegar alguna línea de tendencia en los datos. 
 * Por defecto, usa un método llamado splines.
 ```{r ch22, echo=TRUE, eval=FALSE}
-p<-ggplot(small,aes(x=carat,y=price))
-p+geom_point()+geom_smooth()+facet_wrap(~cut)
+p <- ggplot(small,aes(x=carat,y=price))
+p + geom_point() + 
+  geom_smooth() + 
+  facet_wrap(~cut)
 ```
 
 ## Otras geometrías: `geom_smooth`
 ```{r ch23, echo=FALSE, fig.align='center'}
-p<-ggplot(small,aes(x=carat,y=price))
+p <- ggplot(small,aes(x=carat,y=price))
 p + geom_point() +
         geom_smooth() +
         facet_wrap(~cut)
@@ -215,21 +217,21 @@ p + geom_point() +
 ## Otras geometrías: `geom_smooth`
 * Pasemos en limpio...
 ```{r ch26, echo=TRUE, eval=FALSE}
-p<-ggplot(diamonds, aes(x=carat, y=price, colour=cut))
-p<-p + scale_x_log10() + scale_y_log10()
-p<-p + geom_point(alpha=0.3) +
+p <- ggplot(diamonds, aes(x=carat, y=price, colour=cut))
+p <- p + scale_x_log10() + scale_y_log10()
+p <- p + geom_point(alpha=0.3) +
         geom_smooth(method='loess', colour='black')
-p<-p + facet_wrap(~cut)
+p <- p + facet_wrap(~cut)
 print(p)
 ```
 
 ## Otras geometrías: `geom_smooth`
 ```{r ch27, echo=FALSE, fig.align='center'}
-p<-ggplot(diamonds, aes(x=carat, y=price, colour=cut))
-p<-p + scale_x_log10() + scale_y_log10()
-p<-p + geom_point(alpha=0.3) +
+p <- ggplot(diamonds, aes(x=carat, y=price, colour=cut))
+p <- p + scale_x_log10() + scale_y_log10()
+p <- p + geom_point(alpha=0.3) +
         geom_smooth(method='loess',colour='black')
-p<-p + facet_wrap(~cut)
+p <- p + facet_wrap(~cut)
 print(p)
 ```
 
