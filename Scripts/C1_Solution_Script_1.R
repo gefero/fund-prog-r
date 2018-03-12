@@ -55,10 +55,10 @@ primo<-function(x){
 		}
 	}
 	if (pr == 1) {
-		print('Es n?mero primo')
+		print('Es primo')
 	}
 	else {
-		print('No es n?mero primo')
+		print('No es primo')
 	}
 }
 

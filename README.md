@@ -1,4 +1,4 @@
-# Fundamentos de la Programación Estadística en R
+# Fundamentos de la Programación Estadística y Data Science en R
 
 Un curso de R orientado a estudiantes de ciencias duras, sociales, profesionales, técnicos, etc.
 

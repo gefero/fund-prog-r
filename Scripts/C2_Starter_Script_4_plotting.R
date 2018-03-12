@@ -9,7 +9,7 @@
 ## CONSIGNAS PRACTICA PLOTTING ##
 #################################
 
-# Utilizando el dataset U2_data.csv (que contiene información sobre una encuesta
+# Utilizando el dataset estud.csv (que contiene información sobre una encuesta
 # a estudiantes de la escuela secundaria) resuelva las siguientes consignas:
 
 ## Ejercicio 1. Generar un histograma y un boxplot de la variable G3. Realizarlo tanto con 

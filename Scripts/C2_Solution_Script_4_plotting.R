@@ -9,7 +9,7 @@
 ## CONSIGNAS PRACTICA PLOTTING ##
 #################################
 
-# Utilizando el dataset U2_data.csv (que contiene información sobre una encuesta
+# Utilizando el dataset estud.csv (que contiene información sobre una encuesta
 # a estudiantes de la escuela secundaria) resuelva las siguientes consignas:
 
 setwd('/media/grosati/Elements/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data/')

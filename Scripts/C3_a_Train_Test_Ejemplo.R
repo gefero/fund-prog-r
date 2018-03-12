@@ -4,7 +4,7 @@
 ##########################################################################
 
 ## Curso: FUNDAMENTOS DE PROGRAMACION ESTADISTICA EN R
-## Agosto de 2017
+## Marzo de 2018
 ## Docente: German Rosati
 
 ########################################

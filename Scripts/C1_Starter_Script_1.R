@@ -81,20 +81,49 @@ install_course_github("ifunam", "programacion-estadistica-r")
 ## 1. IMPORTAR EL DATASET "estuds.csv" 
 # (se asume que el archivo está en el working directory)
 
+setwd("/media/grosati/Elements/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data/")
+df <- read.csv("estud.csv", sep=";")
+#write.table(df, "estud2.csv", sep=";",row.names = FALSE)
+
+
+head(df)
 
 ## 2. GENERAR UNA FUNCION QUE DETERMINE SI UN NUMERO ES IMPAR
 
-
-
-
-
 ## 3. GENERAR UNA FUNCION QUE DETERMINE SI UN NUMERO ES PRIMO
-
 
 ## 4. GENERAR UNA FUNCION QUE CALCULE LA MEDIA DE UNA 
 # COLUMNA CUANTITATIVA DEL DATASET. COMPARAR EL RESULTADO 
 # CON LA FUNCION mean() 
 
+
+x<-c(1,6,8,9,0,4,23,13)
+
+sum(is.na(df$G3))
+
+media <- function(x){
+  sum <- 0
+  for (c in 1:length(x)){
+    sum <- sum + x[c]
+  }
+  m <- sum/length(x)
+  return(m)
+}
+
+
+media2 <- function(x){
+  sum <- 0
+  n <- 0
+  for (c in x){
+    sum <- sum + c
+    n <- n + 1
+  }
+  m <- sum / n
+  return(m)
+}
+
+mean(df$age) == media2(df$age)
+media(df$age) == mean(df$age)
 
 ## 5. GENERAR UNA FUNCION QUE CALCULE EL RANGO DE UNA 
 # COLUMNA CUANTITATIVA DEL DATASET. COMPARAR EL RESULTADO 
