@@ -20,7 +20,7 @@ output: slidy_presentation
 
 ### Gráficos de dispersión
 ```{r, tidy=TRUE}
-setwd("/media/digitalhouse/Elements12/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
+setwd("/media/grosati/Elements/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data/")
 default<-read.csv("default.csv")
 plot(default$balance,default$income
       , col=c("lightblue","green")[default$default]
