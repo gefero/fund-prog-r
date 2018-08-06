@@ -12,12 +12,22 @@
 
 ## 1. IMPORTAR EL DATASET "ED_deptos_venta_2014" 
 # (se asume que el archivo está en el working directory)
-setwd("F:/PEN/KINGSTON/PEN2/Cursos/2017_R_Arboles_UNTREF/PPT/Clase 3")
-data<-read.csv("ED_deptos_venta_2014.csv", sep=";")
+setwd("/media/grosati/Elements/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
+data<-read.csv("ED_deptos_venta_2014.csv", sep=",")
+
+data <- data[complete.cases(data), ]
+
+sapply(data, class)
+
+cor(data[, sapply(data, class) == "numeric" | sapply(data, class) == "integer"])
+pairs(data[, sapply(data, class) == "numeric" | sapply(data, class) == "integer"])
+
 
 ## 2. REALICE UN ANÁLISIS EXPLORATORIO DE LOS DATOS: 
         # ¿QUÉ VARIABLES SE ENCUENTRAN ASOCIADAS?
         # ¿QUÉ FORMA TIENE LA ASOCIACION?
+
+pairs(data)
 
 ## 3. GENERE ALGUNAS VISUALIZACIONES (Boxplots, Histogramas, Scatterplots) 
 ##    DE AQUELLAS VARIABLES QUE CONSIDERE RELEVANTES
@@ -42,6 +52,19 @@ data<-read.csv("ED_deptos_venta_2014.csv", sep=";")
 
 setwd("/media/grosati/Elements/PEN/KINGSTON/PEN2/Cursos/REPO_Curso_Fund_Prog_R/Data")
 df <- read.csv("data_filt.csv")
+
+
+df$p47t_recod <- df$p47t > median(df$p47t)
+
+names(df)
+
+model <- glm(p47t_recod ~ . -p47t , data=df, family = binomial)
+
+df2 <- df[,! names(df) %in% 'p47t']
+
+model <- glm(p47t_recod ~ ., data=df2, family=binomial)
+
+
 
 ## 7. REALICE UN ANÁLISIS EXPLORATORIO DE LOS DATOS: 
 # ¿QUÉ VARIABLES SE ENCUENTRAN ASOCIADAS?
