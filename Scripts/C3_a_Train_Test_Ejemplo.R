@@ -18,11 +18,18 @@ y<-500+0.4*(q-10)^3
 noise<-rnorm(length(q), mean=10, sd=80)
 noisy.y<-y+noise 
 
+x <- data.frame(cbind(q,noisy.y))
+write.table(x, "x.csv", row.names = FALSE)
+
 ### GENERA TEST SET -TeS- ###
-qt<-seq(from=0,to=20,by=0.1)
-yt<-500+0.4*(qt-10)^3 
-noiset<-rnorm(length(qt), mean=10, sd=80)
-noisy.yt<-yt+noiset 
+q<-seq(from=0,to=20,by=0.1)
+y<-500+0.4*(q-10)^3 
+noiset<-rnorm(length(q), mean=10, sd=80)
+noisy.y<-y+noiset 
+
+xt <- data.frame(cbind(q,noisy.y))
+write.table(xt, "xt.csv", row.names = FALSE, sep = ";")
+
 
 ### GRAFICA DATOS Y FUNCION REAL ###
 par(mfrow=c(1,2))
